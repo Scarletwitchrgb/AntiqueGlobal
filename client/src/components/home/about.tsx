@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Globe, Award, Users } from "lucide-react";
-import profileImage from "@assets/generated_images/Professional_portrait_Michelle_Tianna_8e3648f3.png";
+import profileImage from "@assets/photo_2025-10-29_04-05-23_1761728832408.jpg";
 
 export function About() {
   return (
@@ -45,7 +45,7 @@ export function About() {
                 <span className="font-semibold text-foreground">Location:</span> Redbank Plains, Queensland, Australia
               </p>
               <p className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">Specialization:</span> Museum-Quality Antiques, Period Furniture, Decorative Arts
+                <span className="font-semibold text-foreground">Specialization:</span> Museum-Quality Antiques, Period Furniture, Decorative Arts, Malls, Collectibles
               </p>
             </div>
           </div>

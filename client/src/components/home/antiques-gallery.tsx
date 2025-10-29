@@ -1,24 +1,46 @@
-import baroqueMirror from "@assets/generated_images/Antique_baroque_mirror_bfe66958.png";
-import marbleSculpture from "@assets/generated_images/Classical_marble_sculpture_d19d67e3.png";
-import louisChairs from "@assets/generated_images/Antique_Louis_XVI_chairs_09452f81.png";
-import grandfatherClock from "@assets/generated_images/Antique_grandfather_clock_1b6a3d69.png";
-import oilPainting from "@assets/generated_images/Antique_oil_painting_7cdfec2a.png";
-import porcelainSet from "@assets/generated_images/Antique_porcelain_tea_set_13b91836.png";
-import writingDesk from "@assets/generated_images/Antique_writing_desk_5cf8e23d.png";
-import chandelier from "@assets/generated_images/Antique_crystal_chandelier_fae29b60.png";
-import persianRug from "@assets/generated_images/Antique_Persian_rug_8c9c5e15.png";
+import frenchMantelClock from "@assets/photo_2025-10-29_04-05-15_1761728880376.jpg";
+import equestrianClock from "@assets/photo_2025-10-29_04-05-14_1761728880377.jpg";
+import bronzeSculpture from "@assets/photo_2025-10-29_04-05-13_1761728880377.jpg";
+import bronzeCollection from "@assets/photo_2025-10-29_04-05-12_1761728880377.jpg";
+import grandShowroom from "@assets/photo_2025-10-29_04-05-10_1761728880378.jpg";
 
 export function AntiquesGallery() {
   const antiques = [
-    { image: baroqueMirror, title: "Baroque Mirror", category: "Decorative Arts", testId: "item-baroque-mirror" },
-    { image: marbleSculpture, title: "Classical Sculpture", category: "Fine Art", testId: "item-sculpture" },
-    { image: louisChairs, title: "Louis XVI Chairs", category: "Period Furniture", testId: "item-chairs" },
-    { image: grandfatherClock, title: "Grandfather Clock", category: "Timepieces", testId: "item-clock" },
-    { image: oilPainting, title: "Oil Painting", category: "Fine Art", testId: "item-painting" },
-    { image: porcelainSet, title: "Porcelain Tea Service", category: "Decorative Arts", testId: "item-porcelain" },
-    { image: writingDesk, title: "Writing Desk", category: "Period Furniture", testId: "item-desk" },
-    { image: chandelier, title: "Crystal Chandelier", category: "Lighting", testId: "item-chandelier" },
-    { image: persianRug, title: "Persian Rug", category: "Textiles", testId: "item-rug" }
+    { 
+      image: frenchMantelClock, 
+      title: "French Mantel Clock Set", 
+      category: "19th Century Timepiece",
+      description: "Exquisite gilt bronze French mantel clock garniture featuring hand-painted Sèvres-style porcelain urns with romantic scenes. A masterpiece of French horology from the 1800s, showcasing exceptional craftsmanship in ormolu mounting and decorative artistry.",
+      testId: "item-french-clock" 
+    },
+    { 
+      image: equestrianClock, 
+      title: "Equestrian Bronze Clock", 
+      category: "Period Timepiece",
+      description: "Magnificent gilt bronze mantel clock featuring an equestrian warrior sculpture in dynamic pose. This piece exemplifies 19th-century French decorative arts with its intricate Rococo-style case work, black enamel panels, and museum-quality bronze casting.",
+      testId: "item-equestrian-clock" 
+    },
+    { 
+      image: bronzeSculpture, 
+      title: "Bronze Figural Candelabra", 
+      category: "Fine Sculpture",
+      description: "Stunning patinated bronze figural sculpture featuring classical maidens holding ornate candelabras. This piece represents the finest tradition of 19th-century French decorative arts, combining neoclassical aesthetics with functional elegance.",
+      testId: "item-bronze-sculpture" 
+    },
+    { 
+      image: bronzeCollection, 
+      title: "Museum-Grade Bronze Collection", 
+      category: "Decorative Arts",
+      description: "An impressive assemblage of museum-quality bronze figural clocks and sculptures. This collection includes patinated and gilt bronze works from the 19th century, featuring neoclassical and romantic period designs with exceptional detail and craftsmanship.",
+      testId: "item-bronze-collection" 
+    },
+    { 
+      image: grandShowroom, 
+      title: "Malachite Vases & Grand Antiques", 
+      category: "Estate Collection",
+      description: "Breathtaking display of monumental malachite vases with gilt bronze mounts, palatial marble fireplace with sculptural caryatids, and museum-caliber paintings. This collection represents the pinnacle of 19th-century European decorative arts suitable for prestigious institutions and grand estates.",
+      testId: "item-grand-collection" 
+    }
   ];
 
   return (
@@ -51,9 +73,14 @@ export function AntiquesGallery() {
                 <div className="text-xs text-primary font-semibold mb-2 uppercase tracking-wider">
                   {item.category}
                 </div>
-                <h3 className="font-serif text-xl font-bold text-foreground">
+                <h3 className="font-serif text-xl font-bold text-foreground mb-3">
                   {item.title}
                 </h3>
+                {item.description && (
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                )}
               </div>
             </div>
           ))}
