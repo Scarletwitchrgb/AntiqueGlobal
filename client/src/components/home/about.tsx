@@ -17,13 +17,13 @@ export function About() {
             </p>
             
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8" data-testid="text-about-description">
-              Based in Redbank Plains, Queensland, Australia, I have built a reputation for integrity, expertise, and exceptional service across six countries. Each piece I handle tells a story, and I take pride in connecting these treasures with those who will cherish them for generations to come.
+              Based in Redbank Plains, Queensland, Australia, I have built a reputation for integrity, expertise, and exceptional service across 10 countries on 4 continents. Each piece I handle tells a story, and I take pride in connecting these treasures with those who will cherish them for generations to come.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <Card className="p-6 text-center hover-elevate" data-testid="card-stat-countries">
                 <Globe className="h-8 w-8 text-primary mx-auto mb-3" />
-                <div className="font-serif text-2xl font-bold text-foreground mb-1">6</div>
+                <div className="font-serif text-2xl font-bold text-foreground mb-1">10</div>
                 <div className="text-sm text-muted-foreground">Countries Served</div>
               </Card>
               

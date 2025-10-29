@@ -1,5 +1,14 @@
+import baroqueMirror from "@assets/generated_images/Antique_baroque_mirror_bfe66958.png";
+import marbleSculpture from "@assets/generated_images/Classical_marble_sculpture_d19d67e3.png";
+import louisChairs from "@assets/generated_images/Antique_Louis_XVI_chairs_09452f81.png";
+import grandfatherClock from "@assets/generated_images/Antique_grandfather_clock_1b6a3d69.png";
+import oilPainting from "@assets/generated_images/Antique_oil_painting_7cdfec2a.png";
+import porcelainSet from "@assets/generated_images/Antique_porcelain_tea_set_13b91836.png";
+import writingDesk from "@assets/generated_images/Antique_writing_desk_5cf8e23d.png";
+import chandelier from "@assets/generated_images/Antique_crystal_chandelier_fae29b60.png";
+import persianRug from "@assets/generated_images/Antique_Persian_rug_8c9c5e15.png";
 import frenchMantelClock from "@assets/photo_2025-10-29_04-05-15_1761728880376.jpg";
-import equestrianClock from "@assets/photo_2025-10-29_04-05-14_1761728880377.jpg";
+import lanciniEquestrianClock from "@assets/photo_2025-10-29_04-05-14_1761728880377.jpg";
 import bronzeSculpture from "@assets/photo_2025-10-29_04-05-13_1761728880377.jpg";
 import bronzeCollection from "@assets/photo_2025-10-29_04-05-12_1761728880377.jpg";
 import grandShowroom from "@assets/photo_2025-10-29_04-05-10_1761728880378.jpg";
@@ -8,38 +17,101 @@ export function AntiquesGallery() {
   const antiques = [
     { 
       image: frenchMantelClock, 
-      title: "French Mantel Clock Set", 
-      category: "19th Century Timepiece",
-      description: "Exquisite gilt bronze French mantel clock garniture featuring hand-painted Sèvres-style porcelain urns with romantic scenes. A masterpiece of French horology from the 1800s, showcasing exceptional craftsmanship in ormolu mounting and decorative artistry.",
+      title: "French Porcelain & Ormolu Clock Garniture", 
+      category: "19th Century French",
+      description: "Magnificent French mantel clock garniture set featuring hand-painted Sèvres-style porcelain urns with romantic pastoral scenes. The clock and urns showcase exceptional gilt bronze (ormolu) mounts with intricate detailing, representing the finest French decorative arts of the 1800s.",
       testId: "item-french-clock" 
     },
     { 
-      image: equestrianClock, 
-      title: "Equestrian Bronze Clock", 
-      category: "Period Timepiece",
-      description: "Magnificent gilt bronze mantel clock featuring an equestrian warrior sculpture in dynamic pose. This piece exemplifies 19th-century French decorative arts with its intricate Rococo-style case work, black enamel panels, and museum-quality bronze casting.",
-      testId: "item-equestrian-clock" 
+      image: lanciniEquestrianClock, 
+      title: "Lancini Style Bronze Equestrian Clock", 
+      category: "Italian Bronze",
+      description: "Spectacular gilt bronze mantel clock in the Lancini tradition, featuring a dramatic equestrian warrior sculpture. The Rococo-style case features black enamel panels with gilt bronze mounts, exemplifying Italian craftsmanship in decorative bronzes. This type of elaborate figural clock is highly sought after by collectors.",
+      testId: "item-lancini-clock" 
     },
     { 
       image: bronzeSculpture, 
-      title: "Bronze Figural Candelabra", 
+      title: "French Neoclassical Bronze Candelabra", 
       category: "Fine Sculpture",
-      description: "Stunning patinated bronze figural sculpture featuring classical maidens holding ornate candelabras. This piece represents the finest tradition of 19th-century French decorative arts, combining neoclassical aesthetics with functional elegance.",
-      testId: "item-bronze-sculpture" 
+      description: "Exquisite patinated and gilt bronze figural sculpture featuring classical maidens with elaborate candelabra arms. The sculptural quality and finishing demonstrate the finest tradition of 19th-century French decorative arts, combining neoclassical aesthetics with functional elegance on a turned wood base.",
+      testId: "item-bronze-candelabra" 
     },
     { 
       image: bronzeCollection, 
-      title: "Museum-Grade Bronze Collection", 
+      title: "Museum Collection of Bronze Clocks", 
       category: "Decorative Arts",
-      description: "An impressive assemblage of museum-quality bronze figural clocks and sculptures. This collection includes patinated and gilt bronze works from the 19th century, featuring neoclassical and romantic period designs with exceptional detail and craftsmanship.",
+      description: "An extraordinary assemblage of museum-quality bronze figural clocks and sculptures. This collection showcases patinated and gilt bronze works from the 19th century, featuring neoclassical and romantic period designs with exceptional detail, including figural pendulum clocks and decorative timepieces.",
       testId: "item-bronze-collection" 
     },
     { 
       image: grandShowroom, 
-      title: "Malachite Vases & Grand Antiques", 
-      category: "Estate Collection",
-      description: "Breathtaking display of monumental malachite vases with gilt bronze mounts, palatial marble fireplace with sculptural caryatids, and museum-caliber paintings. This collection represents the pinnacle of 19th-century European decorative arts suitable for prestigious institutions and grand estates.",
-      testId: "item-grand-collection" 
+      title: "Monumental Malachite Vases & Palace Antiques", 
+      category: "Museum Grade",
+      description: "Breathtaking display of monumental Russian malachite vases with elaborate gilt bronze mounts, palatial carved marble fireplace featuring sculptural caryatids, museum-quality oil paintings, and bronze deer sculptures. This collection represents the absolute pinnacle of 19th-century European decorative arts, suitable for palaces, museums, and grand estates.",
+      testId: "item-malachite-collection" 
+    },
+    { 
+      image: baroqueMirror, 
+      title: "Baroque Carved Gilt Mirror", 
+      category: "Decorative Arts", 
+      description: "Ornate hand-carved baroque mirror with elaborate gilt frame featuring scrollwork and floral motifs, exemplifying period craftsmanship.",
+      testId: "item-baroque-mirror" 
+    },
+    { 
+      image: marbleSculpture, 
+      title: "Classical Marble Sculpture", 
+      category: "Fine Art", 
+      description: "Museum-quality classical marble sculpture showcasing exceptional artistry and timeless elegance.",
+      testId: "item-sculpture" 
+    },
+    { 
+      image: louisChairs, 
+      title: "Louis XVI Salon Chairs", 
+      category: "Period Furniture", 
+      description: "Pair of authentic Louis XVI chairs with original upholstery and gilt detailing, representing French aristocratic taste.",
+      testId: "item-chairs" 
+    },
+    { 
+      image: grandfatherClock, 
+      title: "Regency Longcase Clock", 
+      category: "Timepieces", 
+      description: "Magnificent mahogany grandfather clock with original works and impressive presence for distinguished interiors.",
+      testId: "item-grandfather-clock" 
+    },
+    { 
+      image: oilPainting, 
+      title: "European Oil Painting", 
+      category: "Fine Art", 
+      description: "Period oil painting in original frame, showcasing the artistic traditions of European masters.",
+      testId: "item-painting" 
+    },
+    { 
+      image: porcelainSet, 
+      title: "Antique Porcelain Tea Service", 
+      category: "Decorative Arts", 
+      description: "Complete hand-painted porcelain tea service with gilt accents, perfect for collectors of fine ceramics.",
+      testId: "item-porcelain" 
+    },
+    { 
+      image: writingDesk, 
+      title: "Victorian Writing Desk", 
+      category: "Period Furniture", 
+      description: "Elegant Victorian writing desk with inlay work and original hardware, ideal for executive offices.",
+      testId: "item-desk" 
+    },
+    { 
+      image: chandelier, 
+      title: "Crystal Chandelier", 
+      category: "Lighting", 
+      description: "Spectacular period chandelier with hand-cut crystals, bringing elegance and grandeur to any space.",
+      testId: "item-chandelier" 
+    },
+    { 
+      image: persianRug, 
+      title: "Antique Persian Carpet", 
+      category: "Textiles", 
+      description: "Hand-knotted Persian rug with intricate patterns and rich colors, a testament to centuries-old weaving traditions.",
+      testId: "item-rug" 
     }
   ];
 

@@ -3,12 +3,16 @@ import { MapPin, Globe2 } from "lucide-react";
 
 export function InternationalPresence() {
   const countries = [
-    { name: "Dubai", description: "Luxury antiques for high-end developments" },
-    { name: "United States", description: "Museum partnerships and corporate collections" },
-    { name: "Italy", description: "European heritage pieces and Renaissance art" },
-    { name: "Germany", description: "Fine furniture and decorative arts" },
-    { name: "France", description: "French period antiques and objets d'art" },
-    { name: "Canada", description: "Gallery and retail partnerships" }
+    { name: "Australia", description: "Home base in Queensland - Sourcing and authentication headquarters serving Asia-Pacific region" },
+    { name: "Dubai, UAE", description: "Luxury antiques for prestigious developments, high-end hotels, and exclusive private collections" },
+    { name: "United States", description: "Museum partnerships, corporate collections, and gallery collaborations across major cities" },
+    { name: "United Kingdom", description: "European headquarters for sourcing Georgian, Victorian, and Edwardian period pieces" },
+    { name: "Italy", description: "Renaissance art, Baroque furniture, and Italian decorative arts including Lancini bronzes" },
+    { name: "Germany", description: "Fine German furniture, porcelain, and decorative arts for museums and collectors" },
+    { name: "France", description: "French period antiques, ormolu, Sèvres porcelain, and fine objets d'art" },
+    { name: "Switzerland", description: "Luxury market specializing in exceptional timepieces and museum-grade antiques" },
+    { name: "Belgium", description: "Art Nouveau, Art Deco, and European antiques for retail and private collectors" },
+    { name: "Canada", description: "Premium gallery partnerships and retail establishments across major metropolitan areas" }
   ];
 
   return (
@@ -19,7 +23,7 @@ export function InternationalPresence() {
             International Presence
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="text-international-subtitle">
-            Trusted partnerships across six countries, connecting exceptional antiques with distinguished clients worldwide
+            Trusted partnerships across 10 countries on 4 continents, connecting exceptional antiques with distinguished clients worldwide
           </p>
         </div>
         

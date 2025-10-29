@@ -7,7 +7,7 @@ A professional, elegant website for Michelle Tianna Antiques - a premier multina
 - **Owner**: Michelle Tianna
 - **Location**: Redbank Plains, Queensland, Australia
 - **Specialization**: Museum-quality antiques, period furniture, decorative arts
-- **International Presence**: Serving clients across Dubai, USA, Italy, Germany, France, and Canada
+- **International Presence**: Serving clients across 10 countries: Australia, Dubai (UAE), USA, UK, Italy, Germany, France, Switzerland, Belgium, and Canada
 
 ## Contact Information
 - **Business Email**: michellescarlet455@gmail.com (Primary business inquiries)
@@ -27,7 +27,7 @@ A professional, elegant website for Michelle Tianna Antiques - a premier multina
 - Professional profile of Michelle Tianna
 - Business background and expertise
 - International experience highlights
-- Key statistics (6 countries served, 100+ partnerships)
+- Key statistics (10 countries served, 100+ partnerships)
 
 ### 3. Services Overview
 - **Corporate Acquisitions**: Curating antiques for executive offices and business environments
@@ -35,14 +35,16 @@ A professional, elegant website for Michelle Tianna Antiques - a premier multina
 - **Retail Excellence**: Supplying premium antiques to upscale malls and galleries
 
 ### 4. International Presence
-- Six country markets: Dubai, USA, Italy, Germany, France, Canada
-- Market-specific descriptions and focus areas
-- Active market badges
+- Ten country markets across 4 continents: Australia, Dubai (UAE), USA, UK, Italy, Germany, France, Switzerland, Belgium, Canada
+- Market-specific descriptions and focus areas for each region
+- Active market badges highlighting global reach
 
 ### 5. Antiques Gallery
-- Featured collection of 9 museum-quality antiques
-- Categories: Decorative Arts, Fine Art, Period Furniture, Timepieces, Lighting, Textiles
-- Professional photography and descriptions
+- Featured collection of 14 museum-quality antiques including real inventory photos
+- Real antiques featured: French Ormolu Clock Garniture, Lancini Style Bronze Equestrian Clock, French Bronze Candelabra, Museum-Grade Bronze Collection, Monumental Malachite Vases
+- Categories: 19th Century French, Italian Bronze, Fine Sculpture, Museum Grade, Decorative Arts, Fine Art, Period Furniture, Timepieces, Lighting, Textiles
+- Detailed professional descriptions highlighting provenance and craftsmanship
+- Mix of actual inventory photography and curated antique representations
 
 ### 6. Contact Form
 - Full inquiry submission system
