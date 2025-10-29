@@ -1,14 +1,14 @@
 import { Badge } from "@/components/ui/badge";
-import { MapPin } from "lucide-react";
+import { MapPin, Globe2 } from "lucide-react";
 
 export function InternationalPresence() {
   const countries = [
-    { name: "Dubai", flag: "🇦🇪", description: "Luxury antiques for high-end developments" },
-    { name: "United States", flag: "🇺🇸", description: "Museum partnerships and corporate collections" },
-    { name: "Italy", flag: "🇮🇹", description: "European heritage pieces and Renaissance art" },
-    { name: "Germany", flag: "🇩🇪", description: "Fine furniture and decorative arts" },
-    { name: "France", flag: "🇫🇷", description: "French period antiques and objets d'art" },
-    { name: "Canada", flag: "🇨🇦", description: "Gallery and retail partnerships" }
+    { name: "Dubai", description: "Luxury antiques for high-end developments" },
+    { name: "United States", description: "Museum partnerships and corporate collections" },
+    { name: "Italy", description: "European heritage pieces and Renaissance art" },
+    { name: "Germany", description: "Fine furniture and decorative arts" },
+    { name: "France", description: "French period antiques and objets d'art" },
+    { name: "Canada", description: "Gallery and retail partnerships" }
   ];
 
   return (
@@ -31,8 +31,8 @@ export function InternationalPresence() {
               data-testid={`card-country-${country.name.toLowerCase().replace(' ', '-')}`}
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="text-4xl" data-testid={`flag-${country.name.toLowerCase().replace(' ', '-')}`}>
-                  {country.flag}
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Globe2 className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl font-bold text-foreground mb-1">
