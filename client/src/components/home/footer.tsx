@@ -9,8 +9,6 @@ export function Footer() {
     }
   };
 
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-card border-t py-12 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -97,7 +95,7 @@ export function Footer() {
         <div className="pt-8 border-t">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground" data-testid="text-copyright">
-              © {currentYear} Michelle Tianna Antiques. All rights reserved.
+              © 2004 Michelle Tianna Antiques. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground">
               Redbank Plains, Queensland, Australia
