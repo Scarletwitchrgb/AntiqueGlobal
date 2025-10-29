@@ -1,28 +1,20 @@
-import { type ContactInquiry, type InsertContactInquiry } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { type ContactInquiry, type InsertContactInquiry, contactInquiries } from "@shared/schema";
+import { db } from "../db";
 
 export interface IStorage {
   createContactInquiry(inquiry: InsertContactInquiry): Promise<ContactInquiry>;
+  getAllContactInquiries(): Promise<ContactInquiry[]>;
 }
 
-export class MemStorage implements IStorage {
-  private contactInquiries: Map<string, ContactInquiry>;
-
-  constructor() {
-    this.contactInquiries = new Map();
-  }
-
+export class DbStorage implements IStorage {
   async createContactInquiry(insertInquiry: InsertContactInquiry): Promise<ContactInquiry> {
-    const id = randomUUID();
-    const inquiry: ContactInquiry = {
-      ...insertInquiry,
-      phone: insertInquiry.phone ?? null,
-      id,
-      createdAt: new Date(),
-    };
-    this.contactInquiries.set(id, inquiry);
+    const [inquiry] = await db.insert(contactInquiries).values(insertInquiry).returning();
     return inquiry;
   }
+
+  async getAllContactInquiries(): Promise<ContactInquiry[]> {
+    return await db.select().from(contactInquiries);
+  }
 }
 
-export const storage = new MemStorage();
+export const storage = new DbStorage();
