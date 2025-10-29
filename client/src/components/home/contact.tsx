@@ -24,7 +24,7 @@ export function Contact() {
     defaultValues: {
       name: "",
       email: "",
-      phone: "",
+      phone: undefined,
       inquiryType: "",
       message: ""
     }

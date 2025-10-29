@@ -1,101 +1,98 @@
-# Michelle Tianna Antiques
+# Michelle Tianna Antiques - Business Website
 
-## Overview
+## Project Overview
+A professional, elegant website for Michelle Tianna Antiques - a premier multinational antiques dealer serving museums, corporations, and prestigious retail establishments worldwide.
 
-Michelle Tianna Antiques is a luxury antiques dealer website showcasing a multinational business serving museums, corporations, and prestigious retail establishments across six countries (Dubai, USA, Italy, Germany, France, and Canada). The application features a single-page design with sections for hero presentation, about Michelle, specialized services, international presence, antiques gallery, contact form, and footer.
+## Business Information
+- **Owner**: Michelle Tianna
+- **Location**: Redbank Plains, Queensland, Australia
+- **Specialization**: Museum-quality antiques, period furniture, decorative arts
+- **International Presence**: Serving clients across Dubai, USA, Italy, Germany, France, and Canada
 
-The site emphasizes timeless elegance, trust, and credibility through a photography-first approach inspired by high-end auction houses like Christie's and Sotheby's. The design uses sophisticated typography (Playfair Display for headings, Inter for body text) and a neutral color palette to reflect the heritage value of the antiques being showcased.
+## Contact Information
+- **Business Email**: michellescarlet455@gmail.com (Primary business inquiries)
+- **Personal Email**: michelletianna616@gmail.com (Alternative contact)
+- **Phone/Text**: 0434 654 261 (Text/SMS preferred, calls welcome for business purposes)
+- **WhatsApp**: 0489 925 104 (WhatsApp only - business inquiries)
 
-## User Preferences
+## Website Features
 
-Preferred communication style: Simple, everyday language.
+### 1. Hero Section
+- Business logo and branding
+- Motto: "Where Heritage Meets Excellence"
+- Call-to-action buttons for viewing collection and contact
+- Smooth scroll navigation
 
-## System Architecture
+### 2. About Section
+- Professional profile of Michelle Tianna
+- Business background and expertise
+- International experience highlights
+- Key statistics (6 countries served, 100+ partnerships)
 
-### Frontend Architecture
+### 3. Services Overview
+- **Corporate Acquisitions**: Curating antiques for executive offices and business environments
+- **Museum Partnerships**: Sourcing museum-quality pieces for collections and exhibitions
+- **Retail Excellence**: Supplying premium antiques to upscale malls and galleries
 
-**Technology Stack:**
-- React 18 with TypeScript for type-safe component development
-- Vite as the build tool and development server
-- Wouter for lightweight client-side routing
-- TanStack Query (React Query) for server state management
-- Tailwind CSS for utility-first styling with custom design system
+### 4. International Presence
+- Six country markets: Dubai, USA, Italy, Germany, France, Canada
+- Market-specific descriptions and focus areas
+- Active market badges
 
-**Component Structure:**
-- Single-page application with modular section components (`Hero`, `About`, `Services`, `InternationalPresence`, `AntiquesGallery`, `Contact`, `Footer`)
-- Shadcn/ui component library for consistent, accessible UI components (buttons, forms, cards, dialogs, etc.)
-- Custom design system with CSS variables for theming (light mode with neutral color scheme)
-- Form management using React Hook Form with Zod schema validation
+### 5. Antiques Gallery
+- Featured collection of 9 museum-quality antiques
+- Categories: Decorative Arts, Fine Art, Period Furniture, Timepieces, Lighting, Textiles
+- Professional photography and descriptions
 
-**Design System:**
-- Typography hierarchy using Playfair Display (serif) and Inter (sans-serif)
-- Spacing system based on Tailwind units (4, 6, 8, 12, 16, 20, 24)
-- Consistent border radius (3px, 6px, 9px) and elevation effects
-- Custom CSS variables for colors, borders, and interactive states
+### 6. Contact Form
+- Full inquiry submission system
+- Inquiry types: General, Buying/Selling, Museum Partnership, Corporate, Retail
+- Form validation with Zod
+- Success confirmation with beautiful UI
 
-### Backend Architecture
+### 7. Professional Footer
+- Quick navigation links
+- Contact information
+- Business credentials
 
-**Server Technology:**
-- Express.js server running on Node.js
-- TypeScript for type safety across the full stack
-- Development and production build modes with environment-specific configurations
+## Technical Stack
+- **Frontend**: React, TypeScript, Tailwind CSS, Shadcn UI
+- **Backend**: Express.js, Node.js
+- **Routing**: Wouter
+- **Forms**: React Hook Form with Zod validation
+- **State Management**: TanStack Query
+- **Design System**: Custom tokens with warm gold and burgundy palette
 
-**API Design:**
-- RESTful API endpoint pattern (`/api/*`)
-- Single contact form endpoint (`POST /api/contact`) for inquiry submissions
-- JSON request/response format with Zod schema validation
-- Centralized error handling with appropriate HTTP status codes
+## Design Approach
+- **Typography**: Playfair Display (serif) for headings, Inter for body text
+- **Color Palette**: Warm golds, burgundies, cream tones - evoking luxury and heritage
+- **Visual Style**: Elegant, timeless, professional - appropriate for high-end antiques business
+- **Responsive**: Fully responsive design for all device sizes
+- **Interactions**: Subtle hover effects and smooth transitions
 
-**Data Validation:**
-- Shared schema definitions between client and server using Drizzle-Zod
-- Input validation enforced at API boundary
-- Type-safe data contracts using TypeScript interfaces
+## API Endpoints
+- `POST /api/contact` - Submit contact inquiry
 
-### Data Storage
+## Generated Assets
+All images generated using AI for professional presentation:
+- Business logo
+- Hero background (luxury antiques showroom)
+- Michelle Tianna professional portrait
+- 9 antique items for gallery (mirrors, sculptures, furniture, art, etc.)
 
-**Current Implementation:**
-- In-memory storage using Map data structure (`MemStorage` class)
-- Storage abstraction through `IStorage` interface for future migration flexibility
-- Contact inquiries stored with auto-generated UUIDs and timestamps
+## Project Status
+✅ Complete MVP implementation
+✅ All features functional and tested
+✅ Professional design following guidelines
+✅ Responsive across all breakpoints
+✅ Form validation and submission working
+✅ End-to-end tested successfully
 
-**Database Configuration:**
-- Drizzle ORM configured for PostgreSQL (via `@neondatabase/serverless`)
-- Schema definition in `shared/schema.ts` defines `contact_inquiries` table structure
-- Migration setup prepared but currently using memory storage
-- Database schema includes: id (UUID primary key), name, email, phone, inquiry type, message, and created timestamp
+## Running the Application
+The workflow "Start application" runs `npm run dev` which starts both the Express backend and Vite frontend on port 5000.
 
-**Design Rationale:**
-The memory storage allows rapid development and testing without database dependencies. The abstraction layer (`IStorage` interface) enables seamless transition to persistent PostgreSQL storage when needed without changing business logic or API contracts.
-
-### External Dependencies
-
-**UI Component Library:**
-- Radix UI primitives for accessible, unstyled components (dialogs, dropdowns, forms, etc.)
-- Shadcn/ui as the component composition layer built on Radix UI
-- Lucide React for iconography
-- React Icons for brand icons (WhatsApp)
-
-**Database & ORM:**
-- Neon Serverless PostgreSQL driver for database connectivity
-- Drizzle ORM for type-safe database queries and schema management
-- Drizzle Kit for migrations and schema management
-
-**Forms & Validation:**
-- React Hook Form for performant form state management
-- Zod for runtime type validation and schema definitions
-- @hookform/resolvers for React Hook Form + Zod integration
-
-**Styling & Design:**
-- Tailwind CSS for utility-first styling
-- Class Variance Authority for variant-based component styling
-- clsx and tailwind-merge for conditional class composition
-
-**Development Tools:**
-- TSX for running TypeScript in development
-- esbuild for production server bundling
-- Replit-specific plugins for development experience (error overlay, cartographer, dev banner)
-
-**Assets:**
-- Static images stored in `attached_assets/generated_images/` directory
-- Vite alias configuration (`@assets`) for clean image imports
-- Pre-generated professional images for profile, logo, and antiques gallery
+## Notes
+- Contact form submissions are stored in-memory (MemStorage)
+- All contact methods clearly labeled with usage guidelines
+- International experience prominently featured
+- Professional aesthetic suitable for museum and corporate clientele
