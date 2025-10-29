@@ -16,6 +16,18 @@ import lanciniEquestrianClock from "@assets/photo_2025-10-29_04-05-14_1761728880
 import bronzeSculpture from "@assets/photo_2025-10-29_04-05-13_1761728880377.jpg";
 import bronzeCollection from "@assets/photo_2025-10-29_04-05-12_1761728880377.jpg";
 import grandShowroom from "@assets/photo_2025-10-29_04-05-10_1761728880378.jpg";
+import victorianDesk from "@assets/generated_images/Victorian_secretary_desk_antique_f4f58ab2.png";
+import frenchCandelabra from "@assets/generated_images/French_gilt_bronze_candelabra_b2e6e136.png";
+import chineseVase from "@assets/generated_images/Chinese_porcelain_vase_antique_53bdba87.png";
+import silverTeaService from "@assets/generated_images/Georgian_silver_tea_service_75b7fade.png";
+import ivoryReligious from "@assets/generated_images/Italian_carved_ivory_sculpture_584a9bbf.png";
+import imariCharger from "@assets/generated_images/Japanese_Imari_porcelain_charger_9457fa78.png";
+import meissenFigurines from "@assets/generated_images/Meissen_porcelain_figurines_collection_048d41f4.png";
+import tiffanyLamp from "@assets/generated_images/Tiffany-style_stained_glass_lamp_beb5f491.png";
+import baroqueGiltMirror from "@assets/generated_images/Baroque_carved_gilt_mirror_fafbf88f.png";
+import pocketWatches from "@assets/generated_images/Antique_pocket_watch_collection_10862d6d.png";
+import baccaratChandelier from "@assets/generated_images/Baccarat_crystal_chandelier_antique_562b9d0b.png";
+import cloisonneVases from "@assets/generated_images/Chinese_cloisonné_vases_pair_ea37b0a8.png";
 
 export function AntiquesGallery() {
   const [selectedAntique, setSelectedAntique] = useState<any>(null);
@@ -117,6 +129,90 @@ export function AntiquesGallery() {
       category: "Textiles", 
       description: "Hand-knotted Persian rug with intricate patterns and rich colors, a testament to centuries-old weaving traditions.",
       testId: "item-rug" 
+    },
+    { 
+      image: victorianDesk, 
+      title: "Victorian Secretary Desk", 
+      category: "Period Furniture", 
+      description: "Exquisite Victorian mahogany secretary desk with brass handles, intricate inlay work, and leather writing surface. Features multiple drawers and compartments with original hardware. This museum-quality piece exemplifies 19th-century English craftsmanship and is perfect for executive offices or private libraries.",
+      testId: "item-victorian-desk" 
+    },
+    { 
+      image: frenchCandelabra, 
+      title: "French Gilt Bronze Candelabra Pair", 
+      category: "Decorative Arts", 
+      description: "Magnificent pair of French Rococo-style gilt bronze candelabras with elaborate scrollwork and floral motifs. These museum-quality pieces feature multiple candle holders and exceptional patina, representing the finest tradition of French bronze casting from the 18th century.",
+      testId: "item-french-candelabra" 
+    },
+    { 
+      image: chineseVase, 
+      title: "Chinese Blue and White Porcelain Vase", 
+      category: "Asian Collectibles", 
+      description: "Magnificent Chinese porcelain vase with intricate hand-painted cobalt blue floral designs. Qing Dynasty style with museum-grade quality, featuring traditional patterns and exceptional craftsmanship. A prized piece for serious collectors of Asian antiques.",
+      testId: "item-chinese-vase" 
+    },
+    { 
+      image: silverTeaService, 
+      title: "Georgian Sterling Silver Tea Service", 
+      category: "Silver Collectibles", 
+      description: "Complete Georgian sterling silver tea service including teapot, sugar bowl, and creamer with elaborate engravings and hallmarks. This museum-quality set showcases exceptional English silversmith craftsmanship from the 18th century with ornate detailing and authenticated hallmarks.",
+      testId: "item-silver-service" 
+    },
+    { 
+      image: ivoryReligious, 
+      title: "Italian Carved Ivory Religious Sculpture", 
+      category: "Fine Art", 
+      description: "Rare Italian carved ivory sculpture of Madonna and Child, displaying extraordinary detail and craftsmanship. This museum-grade devotional piece features aged patina and is presented on a wooden stand. A significant example of European religious art from the Renaissance period.",
+      testId: "item-ivory-sculpture" 
+    },
+    { 
+      image: imariCharger, 
+      title: "Japanese Imari Porcelain Charger", 
+      category: "Asian Collectibles", 
+      description: "Large decorative Japanese Imari porcelain charger plate with vibrant colors and gold leaf accents. Features traditional phoenix and floral patterns characteristic of 19th-century Imari ware. This museum-quality piece is highly sought after by collectors of Japanese decorative arts.",
+      testId: "item-imari-charger" 
+    },
+    { 
+      image: meissenFigurines, 
+      title: "Meissen Porcelain Figurine Collection", 
+      category: "Collectibles", 
+      description: "Exceptional collection of hand-painted Meissen porcelain figurines in elaborate 18th-century period costumes. These museum-quality German porcelain sculptures showcase the finest European ceramic artistry with intricate detailing and vibrant hand-painted decorations.",
+      testId: "item-meissen-figurines" 
+    },
+    { 
+      image: tiffanyLamp, 
+      title: "Tiffany-Style Stained Glass Lamp", 
+      category: "Art Nouveau", 
+      description: "Stunning Art Nouveau stained glass lamp with intricate dragonfly pattern in colorful glass. Features a bronze base with original patina. This museum-quality piece exemplifies the finest American decorative arts from the early 20th century.",
+      testId: "item-tiffany-lamp" 
+    },
+    { 
+      image: baroqueGiltMirror, 
+      title: "Ornate Baroque Gilt Mirror", 
+      category: "Decorative Arts", 
+      description: "Spectacular hand-carved Baroque mirror with ornate gilt wood frame featuring cherubs, scrollwork, and elaborate floral motifs. The aged gold leaf finish and museum-quality craftsmanship make this a centerpiece worthy of the finest estates.",
+      testId: "item-baroque-gilt-mirror" 
+    },
+    { 
+      image: pocketWatches, 
+      title: "Antique Pocket Watch Collection", 
+      category: "Horology", 
+      description: "Museum-grade collection of antique gold pocket watches with ornate engravings and exposed mechanical movements. These exceptional timepieces showcase the finest Swiss and English watchmaking from the 18th and 19th centuries, perfect for serious horological collectors.",
+      testId: "item-pocket-watches" 
+    },
+    { 
+      image: baccaratChandelier, 
+      title: "Baccarat Crystal Chandelier", 
+      category: "Lighting", 
+      description: "Magnificent French Baccarat crystal chandelier with multiple tiers of hand-cut crystal prisms and drops. The gilt bronze frame and exceptional sparkle represent the pinnacle of 19th-century French decorative lighting. A museum-quality piece suitable for grand estates.",
+      testId: "item-baccarat-chandelier" 
+    },
+    { 
+      image: cloisonneVases, 
+      title: "Chinese Cloisonné Vases Pair", 
+      category: "Asian Collectibles", 
+      description: "Spectacular pair of Chinese cloisonné vases with intricate enamel work featuring dragon and floral motifs in vibrant colors. Ming Dynasty style with exceptional craftsmanship on bronze. These museum-quality pieces represent the finest tradition of Chinese decorative metalwork.",
+      testId: "item-cloisonne-vases" 
     }
   ];
 
