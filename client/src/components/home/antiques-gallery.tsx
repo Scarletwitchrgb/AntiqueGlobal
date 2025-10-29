@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Download, X } from "lucide-react";
 import baroqueMirror from "@assets/generated_images/Antique_baroque_mirror_bfe66958.png";
 import marbleSculpture from "@assets/generated_images/Classical_marble_sculpture_d19d67e3.png";
 import louisChairs from "@assets/generated_images/Antique_Louis_XVI_chairs_09452f81.png";
@@ -14,6 +18,7 @@ import bronzeCollection from "@assets/photo_2025-10-29_04-05-12_1761728880377.jp
 import grandShowroom from "@assets/photo_2025-10-29_04-05-10_1761728880378.jpg";
 
 export function AntiquesGallery() {
+  const [selectedAntique, setSelectedAntique] = useState<any>(null);
   const antiques = [
     { 
       image: frenchMantelClock, 
@@ -131,15 +136,21 @@ export function AntiquesGallery() {
           {antiques.map((item, index) => (
             <div 
               key={index}
-              className="group rounded-lg overflow-hidden border bg-card hover-elevate transition-all"
+              onClick={() => setSelectedAntique(item)}
+              className="group rounded-lg overflow-hidden border bg-card hover-elevate transition-all cursor-pointer"
               data-testid={item.testId}
             >
-              <div className="aspect-[4/3] overflow-hidden bg-muted/20">
+              <div className="aspect-[4/3] overflow-hidden bg-muted/20 relative">
                 <img 
                   src={item.image} 
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity font-semibold text-sm">
+                    Click for Details
+                  </span>
+                </div>
               </div>
               <div className="p-6">
                 <div className="text-xs text-primary font-semibold mb-2 uppercase tracking-wider">
@@ -149,7 +160,7 @@ export function AntiquesGallery() {
                   {item.title}
                 </h3>
                 {item.description && (
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
                     {item.description}
                   </p>
                 )}
@@ -157,6 +168,69 @@ export function AntiquesGallery() {
             </div>
           ))}
         </div>
+        
+        <Dialog open={!!selectedAntique} onOpenChange={() => setSelectedAntique(null)}>
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+            {selectedAntique && (
+              <>
+                <DialogHeader>
+                  <DialogTitle className="font-serif text-2xl md:text-3xl">
+                    {selectedAntique.title}
+                  </DialogTitle>
+                  <DialogDescription className="text-primary font-semibold uppercase tracking-wider">
+                    {selectedAntique.category}
+                  </DialogDescription>
+                </DialogHeader>
+                
+                <div className="space-y-6 mt-4">
+                  <div className="relative rounded-lg overflow-hidden bg-muted/20">
+                    <img 
+                      src={selectedAntique.image} 
+                      alt={selectedAntique.title}
+                      className="w-full h-auto object-contain max-h-[60vh]"
+                    />
+                  </div>
+                  
+                  {selectedAntique.description && (
+                    <div>
+                      <h4 className="font-semibold text-lg mb-3">Description</h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {selectedAntique.description}
+                      </p>
+                    </div>
+                  )}
+                  
+                  <div className="flex gap-3 pt-4 border-t">
+                    <Button 
+                      onClick={() => {
+                        const link = document.createElement('a');
+                        link.href = selectedAntique.image;
+                        link.download = `${selectedAntique.title.replace(/\s+/g, '_')}.jpg`;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      }}
+                      className="flex-1"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      Save Image
+                    </Button>
+                    <Button 
+                      variant="outline"
+                      onClick={() => setSelectedAntique(null)}
+                    >
+                      Close
+                    </Button>
+                  </div>
+                  
+                  <p className="text-xs text-muted-foreground italic">
+                    For inquiries about this piece, please contact us using the form below.
+                  </p>
+                </div>
+              </>
+            )}
+          </DialogContent>
+        </Dialog>
         
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground" data-testid="text-gallery-note">
